@@ -1,0 +1,9 @@
+version: "3"
+services:
+  jupyter:
+    image: davealonbehr/gen-heuristics
+    ports:
+      - 8888:8888
+    volumes:
+      - ${PWD}:/home/jovyan/work
+    command: start-notebook.sh --NotebookApp.token=''
